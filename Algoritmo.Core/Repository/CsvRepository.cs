@@ -26,7 +26,7 @@ namespace Algoritmo.Core.Repository
             return records;
         }
 
-        public List<TrabajoMaquinaInput> GetTrabajosMaquina()
+        public List<TrabajoMaquinaInput> GetTrabajosMaquina(int index)
         {
             TextReader textReader = File.OpenText(_inputPath);
             var csv = new CsvReader(textReader);

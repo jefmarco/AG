@@ -9,15 +9,20 @@ using System.Threading.Tasks;
 
 namespace Algoritmo.Core
 {
-    public class FuncionObjectivoAlgorithm
+    public class RandomAlgorithm
     {
         private readonly CsvRepository _csvRepository;
-        public FuncionObjectivoAlgorithm()
+        public RandomAlgorithm()
         {
             _csvRepository = new CsvRepository();
         }
 
-        public TotalObjetivo CalculateAllOutputs(List<TrabajoInput> trabajos, List<TrabajoMaquinaInput> trabajoMaquinasCoste)
+        public List<TotalObjetivo> CalculateAllObjectives(List<TrabajoInput> trabajos, List<TrabajoMaquinaInput> trabajoMaquinasCoste)
+        {
+            return null;
+        }
+
+        public TotalObjetivo CalculateMinObjective(List<TrabajoInput> trabajos, List<TrabajoMaquinaInput> trabajoMaquinasCoste)
         {
             return null;
         }

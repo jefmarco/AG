@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace Algoritmo.Core.Domain.Model
 {
-    public class MaquinaObjetivo
+    public class MachineCandidate
     {
-        public int Id { get; set; }
-        public List<TrabajoObjetivo> Trabajos { get; set; }
-        public int Objetivo { get; set; }
+        public List<int> JobIds { get; set; }
     }
 }
