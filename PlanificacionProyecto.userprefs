@@ -1,0 +1,17 @@
+﻿<Properties StartupConfiguration="{00D19FBD-4FB1-4D27-8FAD-7A23B1F032F1}|Default">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.PlanificacionProyecto PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="PlanificacionProyecto\Planificador.cs">
+    <Files>
+      <File FileName="PlanificacionProyecto\Planificador.cs" Line="159" Column="9" />
+      <File FileName="PlanificacionProyecto\Interfaz.cs" Line="43" Column="74" />
+      <File FileName="PlanificacionProyecto\Program.cs" Line="117" Column="60" />
+      <File FileName="PlanificacionProyecto\Maquinas.cs" Line="70" Column="4" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+</Properties>

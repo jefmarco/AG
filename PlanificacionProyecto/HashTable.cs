@@ -1,0 +1,6 @@
+namespace PlanificacionProyecto
+{
+	class HashTable
+	{
+	}
+}
