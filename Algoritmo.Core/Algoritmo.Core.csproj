@@ -48,6 +48,7 @@
     <Compile Include="Domain\Model\MaquinaObjetivo.cs" />
     <Compile Include="Domain\Model\TotalObjetivo.cs" />
     <Compile Include="Domain\Model\TrabajoObjetivo.cs" />
+    <Compile Include="Helper\BatchObjectiveHelper.cs" />
     <Compile Include="Helper\JobObjectiveHelper.cs" />
     <Compile Include="Helper\MachineObjectiveHelper.cs" />
     <Compile Include="RandomAlgorithm.cs" />

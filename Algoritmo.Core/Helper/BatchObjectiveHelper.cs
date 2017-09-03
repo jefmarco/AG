@@ -9,7 +9,7 @@ namespace Algoritmo.Core.Helper
 {
     public class BatchObjectiveHelper
     {
-        private readonly BatchCandidate _candidate;
+        public readonly BatchCandidate _candidate;
         public BatchObjectiveHelper(BatchCandidate Candidate)
         {
             _candidate = Candidate;

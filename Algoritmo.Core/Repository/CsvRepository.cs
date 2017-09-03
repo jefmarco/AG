@@ -12,10 +12,13 @@ namespace Algoritmo.Core.Repository
     public class CsvRepository
     {
         private readonly string _inputPath;
+        private readonly string _outputPath;
 
         public CsvRepository()
         {
             _inputPath = System.AppDomain.CurrentDomain.BaseDirectory;
+            var outputFile = DateTime.Now.ToString("yyyy-dd-M--HH-mm-ss");
+            _outputPath = outputFile;
         }
 
         public List<TrabajoInput> GetTrabajos()
@@ -32,6 +35,13 @@ namespace Algoritmo.Core.Repository
             var csv = new CsvReader(textReader);
             var records = csv.GetRecords<TrabajoMaquinaInput>().ToList();
             return records;
+        }
+
+        public void WriteBatchResults(List<BatchResultOutput> outputs)
+        {
+            TextWriter textWrite = new StreamWriter(_outputPath);
+            var csvWrite = new CsvWriter(textWrite);
+            csvWrite.WriteRecords(outputs);
         }
     }
 }
