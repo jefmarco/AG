@@ -1,4 +1,0 @@
-C:\Users\Rafa\Documents\Projects\PlanificacionProyecto\PlanificacionProyecto\bin\Debug\PlanificacionProyecto.exe
-C:\Users\Rafa\Documents\Projects\PlanificacionProyecto\PlanificacionProyecto\bin\Debug\PlanificacionProyecto.pdb
-C:\Users\Rafa\Documents\Projects\PlanificacionProyecto\PlanificacionProyecto\obj\x86\Debug\PlanificacionProyecto.exe
-C:\Users\Rafa\Documents\Projects\PlanificacionProyecto\PlanificacionProyecto\obj\x86\Debug\PlanificacionProyecto.pdb
