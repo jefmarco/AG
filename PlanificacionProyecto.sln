@@ -17,6 +17,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Input", "Input", "{8BA440DA
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Output", "Output", "{31309D5D-F8F7-46EA-9AAE-71588DF3E625}"
 	ProjectSection(SolutionItems) = preProject
+		Resources\Output\Output-2017-03-9--13-51-16.csv = Resources\Output\Output-2017-03-9--13-51-16.csv
 		Resources\Output\OutputTest.txt = Resources\Output\OutputTest.txt
 	EndProjectSection
 EndProject

@@ -11,19 +11,24 @@ namespace Algoritmo.Core.Repository
 {
     public class CsvRepository
     {
+        public const string InputFileName = "Input-1-Trabajos.csv";
+        public const string InputTrabajoMaquina = "Input-1-TrabajoMaquina";
+        public const string Csv = ".csv";
         private readonly string _inputPath;
         private readonly string _outputPath;
 
         public CsvRepository()
         {
-            _inputPath = System.AppDomain.CurrentDomain.BaseDirectory;
-            var outputFile = DateTime.Now.ToString("yyyy-dd-M--HH-mm-ss");
-            _outputPath = outputFile;
+            var x = Directory.GetParent(System.AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.Parent;
+            
+            _inputPath = x.FullName + @"\Resources\Input\";
+            _outputPath = x.FullName + @"\Resources\Output\"; 
         }
 
         public List<TrabajoInput> GetTrabajos()
         {
-            TextReader textReader = File.OpenText(_inputPath);
+            var inputFile = _inputPath + InputFileName;
+            TextReader textReader = File.OpenText(inputFile);
             var csv = new CsvReader(textReader);
             var records = csv.GetRecords<TrabajoInput>().ToList();
             return records;
@@ -31,7 +36,8 @@ namespace Algoritmo.Core.Repository
 
         public List<TrabajoMaquinaInput> GetTrabajosMaquina(int index)
         {
-            TextReader textReader = File.OpenText(_inputPath);
+            var inputFile = $"{_inputPath}{InputTrabajoMaquina}-{index}{Csv}";
+            TextReader textReader = File.OpenText(inputFile);
             var csv = new CsvReader(textReader);
             var records = csv.GetRecords<TrabajoMaquinaInput>().ToList();
             return records;
@@ -39,9 +45,13 @@ namespace Algoritmo.Core.Repository
 
         public void WriteBatchResults(List<BatchResultOutput> outputs)
         {
-            TextWriter textWrite = new StreamWriter(_outputPath);
+            var dateFile = DateTime.Now.ToString("yyyy-dd-M--HH-mm-ss");
+            var outputFileName = _outputPath + "Output-" + dateFile + Csv;
+            TextWriter textWrite = new StreamWriter(outputFileName);
             var csvWrite = new CsvWriter(textWrite);
             csvWrite.WriteRecords(outputs);
+            textWrite.Flush();
+            textWrite.Close();
         }
     }
 }
