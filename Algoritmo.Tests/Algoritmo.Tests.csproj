@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="Helper\JobObjectiveHelperTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RandomAlgorithmTest\RandomAlgorithmtest.cs" />
     <Compile Include="Repository\CsvRepositoryTest.cs" />
   </ItemGroup>
   <ItemGroup>
