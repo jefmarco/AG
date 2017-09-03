@@ -8,6 +8,7 @@ namespace Algoritmo.Core.Domain.Model
 {
     public class MachineCandidate
     {
+        public int Id { get; set; }
         public List<int> JobIds { get; set; }
     }
 }

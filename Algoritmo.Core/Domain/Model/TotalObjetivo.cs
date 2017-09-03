@@ -9,12 +9,6 @@ namespace Algoritmo.Core.Domain.Model
     public class TotalObjetivo
     {
         public List<MaquinaObjetivo> MaquinaObjetivos { get; set; }
-        public int Objetivo
-        {
-            get
-            {
-                return MaquinaObjetivos.Sum(mo => mo.Objetivo);
-            }
-        }
+        public int Objetivo { get; set; }
     }
 }

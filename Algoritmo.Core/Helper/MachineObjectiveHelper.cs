@@ -11,18 +11,18 @@ namespace Algoritmo.Core.Helper
     public class MachineObjectiveHelper
     {
         private readonly List<JobObjectiveHelper> _jobIds;
-        private readonly int _machineId;
+        public readonly int MachineId;
         private readonly CsvRepository _csvRepository;
         public MachineObjectiveHelper(List<int> jobIds, int machineId)
         {
             _jobIds = jobIds.Select(j => new JobObjectiveHelper(j, machineId)).ToList();
-            _machineId = machineId;
+            MachineId = machineId;
             _csvRepository = new CsvRepository();
         }
 
         public MaquinaObjetivo CalculateObjective()
         {
-            var valueObjectivo = 0;
+            var valueObjetivo = 0;
             var prevJobId = _jobIds.First().JobId;
             var nextJobId = prevJobId;
             var trabajosObjetivo = new List<TrabajoObjetivo>();
@@ -30,18 +30,18 @@ namespace Algoritmo.Core.Helper
             foreach (var job in _jobIds)
             {
                 nextJobId = job.JobId;
-                var tempJob = job.CalculateObjective(valueObjectivo);
+                var tempJob = job.CalculateObjective(valueObjetivo);
                 var machineDelay = GetMachineDelay(prevJobId, nextJobId);
                 var temp = tempJob.Objetivo + machineDelay;
                 trabajosObjetivo.Add(tempJob);
-                valueObjectivo = valueObjectivo + temp;
+                valueObjetivo = valueObjetivo + temp;
                 prevJobId = nextJobId;
             }
 
             var maquinaObjetivo = new MaquinaObjetivo()
             {
-                Id = _machineId,
-                Objetivo = valueObjectivo,
+                Id = MachineId,
+                Objetivo = valueObjetivo,
                 Trabajos = trabajosObjetivo
             };
 
@@ -50,7 +50,7 @@ namespace Algoritmo.Core.Helper
 
         private int GetMachineDelay(int prevJobId, int nextJobId)
         {
-            var trabajosMaquina = _csvRepository.GetTrabajosMaquina(_machineId);
+            var trabajosMaquina = _csvRepository.GetTrabajosMaquina(MachineId);
             var trabajoMaquina = trabajosMaquina[prevJobId];
             var jobDelays = new List<int>() { trabajoMaquina.Trabajo1, trabajoMaquina.Trabajo2, trabajoMaquina.Trabajo3, trabajoMaquina.Trabajo4, trabajoMaquina.Trabajo5, trabajoMaquina.Trabajo6 }; //hack
             var jobDelay = jobDelays[nextJobId - 1];
