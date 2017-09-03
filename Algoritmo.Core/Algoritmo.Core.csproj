@@ -49,11 +49,13 @@
     <Compile Include="Domain\Model\TotalObjetivo.cs" />
     <Compile Include="Domain\Model\TrabajoObjetivo.cs" />
     <Compile Include="Helper\BatchObjectiveHelper.cs" />
+    <Compile Include="Helper\BatchProcessor.cs" />
     <Compile Include="Helper\JobObjectiveHelper.cs" />
     <Compile Include="Helper\MachineObjectiveHelper.cs" />
     <Compile Include="RandomAlgorithm.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\CsvRepository.cs" />
+    <Compile Include="Repository\Model\BatchResultOutput.cs" />
     <Compile Include="Repository\Model\TrabajoInput.cs" />
     <Compile Include="Repository\Model\TrabajoMaquinaInput.cs" />
   </ItemGroup>

@@ -59,10 +59,6 @@ namespace Algoritmo.Core
 
             return batch;
         }
-
-        public TotalObjetivo CalculateMinObjective(List<TrabajoInput> trabajos, List<TrabajoMaquinaInput> trabajoMaquinasCoste)
-        {
-            return null;
-        }
+        
     }
 }

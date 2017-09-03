@@ -15,6 +15,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Input", "Input", "{8BA440DA
 		Resources\Input\Input-1-Trabajos.csv = Resources\Input\Input-1-Trabajos.csv
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Output", "Output", "{31309D5D-F8F7-46EA-9AAE-71588DF3E625}"
+	ProjectSection(SolutionItems) = preProject
+		Resources\Output\OutputTest.txt = Resources\Output\OutputTest.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algoritmo.Tests", "Algoritmo.Tests\Algoritmo.Tests.csproj", "{7ED11FCA-F5D2-4092-8C9F-BAAA146F1C35}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,11 +44,20 @@ Global
 		{E8A2419D-C6EE-40E2-8021-56F32119FB9D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E8A2419D-C6EE-40E2-8021-56F32119FB9D}.Release|x86.ActiveCfg = Release|Any CPU
 		{E8A2419D-C6EE-40E2-8021-56F32119FB9D}.Release|x86.Build.0 = Release|Any CPU
+		{7ED11FCA-F5D2-4092-8C9F-BAAA146F1C35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7ED11FCA-F5D2-4092-8C9F-BAAA146F1C35}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7ED11FCA-F5D2-4092-8C9F-BAAA146F1C35}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7ED11FCA-F5D2-4092-8C9F-BAAA146F1C35}.Debug|x86.Build.0 = Debug|Any CPU
+		{7ED11FCA-F5D2-4092-8C9F-BAAA146F1C35}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7ED11FCA-F5D2-4092-8C9F-BAAA146F1C35}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7ED11FCA-F5D2-4092-8C9F-BAAA146F1C35}.Release|x86.ActiveCfg = Release|Any CPU
+		{7ED11FCA-F5D2-4092-8C9F-BAAA146F1C35}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{8BA440DA-7FDF-4B20-928F-C43EDDECA97D} = {837A5694-2C0C-430F-85A8-BFF184EC063F}
+		{31309D5D-F8F7-46EA-9AAE-71588DF3E625} = {837A5694-2C0C-430F-85A8-BFF184EC063F}
 	EndGlobalSection
 EndGlobal
