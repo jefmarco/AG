@@ -11,13 +11,13 @@ namespace Algoritmo.Core.Helper
 {
     public class JobObjectiveHelper
     {
-        private readonly int _jobId;
+        public readonly int JobId;
         private readonly int _machineId;
         private readonly CsvRepository _csvRepository;
 
         public JobObjectiveHelper(int jobId, int machineId)
         {
-            _jobId = jobId;
+            JobId = jobId;
             _machineId = machineId;
             _csvRepository = new CsvRepository();
         }
@@ -26,7 +26,7 @@ namespace Algoritmo.Core.Helper
             var job = _csvRepository
                 .GetTrabajos()
                 .ToList()
-                .Where(t => t.Id == _jobId).First();
+                .Where(t => t.Id == JobId).First();
 
             var endTime = CalculateEndTime(initialTime, job);
 
@@ -38,7 +38,7 @@ namespace Algoritmo.Core.Helper
 
             var trabajo = new TrabajoObjetivo()
             {
-                Id = _jobId,
+                Id = JobId,
                 IsOverdue = isOverdue,
                 Objetivo = valueObjective
             };

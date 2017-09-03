@@ -6,6 +6,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlanificacionProyecto", "Pl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algoritmo.Core", "Algoritmo.Core\Algoritmo.Core.csproj", "{E8A2419D-C6EE-40E2-8021-56F32119FB9D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{837A5694-2C0C-430F-85A8-BFF184EC063F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Input", "Input", "{8BA440DA-7FDF-4B20-928F-C43EDDECA97D}"
+	ProjectSection(SolutionItems) = preProject
+		Resources\Input\Input-1-TrabajoMaquina-1.csv = Resources\Input\Input-1-TrabajoMaquina-1.csv
+		Resources\Input\Input-1-TrabajoMaquina-2.csv = Resources\Input\Input-1-TrabajoMaquina-2.csv
+		Resources\Input\Input-1-Trabajos.csv = Resources\Input\Input-1-Trabajos.csv
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,5 +40,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8BA440DA-7FDF-4B20-928F-C43EDDECA97D} = {837A5694-2C0C-430F-85A8-BFF184EC063F}
 	EndGlobalSection
 EndGlobal

@@ -43,8 +43,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Domain\Model\BatchCandidate.cs" />
+    <Compile Include="Domain\Model\MachineCandidate.cs" />
+    <Compile Include="Domain\Model\MaquinaObjetivo.cs" />
+    <Compile Include="Domain\Model\TotalObjetivo.cs" />
+    <Compile Include="Domain\Model\TrabajoObjetivo.cs" />
+    <Compile Include="Helper\JobObjectiveHelper.cs" />
+    <Compile Include="Helper\MachineObjectiveHelper.cs" />
+    <Compile Include="RandomAlgorithm.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\CsvRepository.cs" />
+    <Compile Include="Repository\Model\TrabajoInput.cs" />
+    <Compile Include="Repository\Model\TrabajoMaquinaInput.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

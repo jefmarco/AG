@@ -23,25 +23,37 @@ namespace Algoritmo.Core.Helper
         public MaquinaObjetivo CalculateObjective()
         {
             var valueObjectivo = 0;
-            var machineDelay = 0;
-            var prevJobId = 0;
-            var nextJobId = 0;
+            var prevJobId = _jobIds.First().JobId;
+            var nextJobId = prevJobId;
+            var trabajosObjetivo = new List<TrabajoObjetivo>();
 
             foreach (var job in _jobIds)
             {
+                nextJobId = job.JobId;
                 var tempJob = job.CalculateObjective(valueObjectivo);
+                var machineDelay = GetMachineDelay(prevJobId, nextJobId);
                 var temp = tempJob.Objetivo + machineDelay;
-                valueObjectivo = temp;
-                machineDelay = GetMachineDelay(tempJob.Id);
+                trabajosObjetivo.Add(tempJob);
+                valueObjectivo = valueObjectivo + temp;
+                prevJobId = nextJobId;
             }
+
+            var maquinaObjetivo = new MaquinaObjetivo()
+            {
+                Id = _machineId,
+                Objetivo = valueObjectivo,
+                Trabajos = trabajosObjetivo
+            };
+
+            return maquinaObjetivo;
         }
 
-        private int GetMachineDelay(int jobId)
+        private int GetMachineDelay(int prevJobId, int nextJobId)
         {
             var trabajosMaquina = _csvRepository.GetTrabajosMaquina(_machineId);
-            var trabajoMaquina = trabajosMaquina[jobId];
+            var trabajoMaquina = trabajosMaquina[prevJobId];
             var jobDelays = new List<int>() { trabajoMaquina.Trabajo1, trabajoMaquina.Trabajo2, trabajoMaquina.Trabajo3, trabajoMaquina.Trabajo4, trabajoMaquina.Trabajo5, trabajoMaquina.Trabajo6 }; //hack
-            var jobDelay = jobDelays[jobId - 1];
+            var jobDelay = jobDelays[nextJobId - 1];
             return jobDelay;
         }
     }
