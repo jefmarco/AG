@@ -16,6 +16,8 @@ namespace Algoritmo.Tests.RandomAlgorithmTest
         {
             RandomAlgorithm p = new RandomAlgorithm();
             var batches = p.GenerateRandomBatches(5);
+
+            Assert.AreEqual(batches.Count, 5);
         }
 
 
