@@ -10,6 +10,6 @@ namespace Algoritmo.Core.Domain.Model
     {
         public int Id { get; set; }
         public int Objetivo { get; set; }
-        public bool IsOverdue { get; set; }
+        public bool IsOverdue { get; set; } //si sobrepasa la fecha limite.
     }
 }
