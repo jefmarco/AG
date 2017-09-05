@@ -23,7 +23,7 @@ namespace Algoritmo.Tests.Helper
             var initialTime = 0;
             var x= joboh.CalculateObjective(initialTime);
             
-            Assert.AreEqual(x.Objetivo,80);
+            Assert.AreEqual(x.Objetivo,20);
             
         }
 
