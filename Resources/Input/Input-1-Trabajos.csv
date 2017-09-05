@@ -1,6 +1,6 @@
 Id,TiempoProcMaquina1,TiempoProcMaquina2,PesoRetraso,PesoAdelanto,FechaEntrega,FechaLanzamiento,FechaLimite
 1,60,53,9,8,212,14,233
-2,58,80,3,2,58,9,64
+2,58,80,3,2,77,9,85
 3,80,58,6,5,205,15,226
 4,89,83,6,8,164,9,180
 5,62,16,1,1,437,8,481

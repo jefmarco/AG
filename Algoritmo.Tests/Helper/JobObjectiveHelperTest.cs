@@ -18,12 +18,12 @@ namespace Algoritmo.Tests.Helper
         public void Test()
         {
             var machineId = 1;
-            var jobId = 1;
+            var jobId = 2;
             JobObjectiveHelper joboh = new JobObjectiveHelper(jobId, machineId);
             var initialTime = 0;
             var x= joboh.CalculateObjective(initialTime);
             
-            Assert.AreEqual(x.Objetivo,1104);
+            Assert.AreEqual(x.Objetivo,80);
             
         }
 
