@@ -21,7 +21,7 @@ namespace Algoritmo.Tests.Helper
             var jobId = 2;
             JobObjectiveHelper joboh = new JobObjectiveHelper(jobId, machineId);
             var initialTime = 0;
-            var x= joboh.CalculateObjective(initialTime);
+            var x = joboh.CalculateObjective(initialTime);
             
             Assert.AreEqual(x.Objetivo,20);
             
